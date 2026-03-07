@@ -1,0 +1,44 @@
+[2025-11-09 15:09:29] [TestNG-tests-1] INFO  utils.LogUtil - ===== Test Suite Started =====
+[2025-11-09 15:09:29] [TestNG-tests-1] INFO  utils.LogUtil - ===== Test Suite Finished =====
+[2025-11-09 15:36:26] [TestNG-tests-1] INFO  utils.LogUtil - ===== Test Suite Started =====
+[2025-11-09 15:36:27] [TestNG-tests-1] INFO  utils.LogUtil - ===== Test Suite Finished =====
+[2025-11-09 15:45:20] [TestNG-tests-1] INFO  utils.LogUtil - ===== Test Suite Started =====
+[2025-11-09 15:45:20] [TestNG-tests-1] INFO  utils.LogUtil - Started test: verifyLogin
+[2025-11-09 15:45:20] [TestNG-tests-1] WARN  utils.LogUtil - ⚠️ Test Skipped: verifyLogin
+[2025-11-09 15:45:20] [TestNG-tests-1] INFO  utils.LogUtil - ===== Test Suite Finished =====
+[2025-11-09 15:49:04] [TestNG-tests-1] INFO  utils.LogUtil - ===== Test Suite Started =====
+[2025-11-09 15:49:44] [TestNG-tests-1] INFO  utils.LogUtil - Started test: verifyLogin
+[2025-11-09 15:50:50] [TestNG-tests-1] ERROR utils.LogUtil - ❌ Test Failed: verifyLogin | org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#username"}
+  (Session info: chrome=142.0.7444.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c444598d503ff93f4ead0043787bb9dd, findElement {using=id, value=username}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.60, chrome: {chromedriverVersion: 142.0.7444.61 (9884f628acbc..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57207}, goog:processID: 18308, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57207/devtoo..., se:cdpVersion: 142.0.7444.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c444598d503ff93f4ead0043787bb9dd
+[2025-11-09 15:50:51] [TestNG-tests-1] INFO  utils.LogUtil - ===== Test Suite Finished =====
+[2025-11-09 16:00:24] [TestNG-tests-1] INFO  utils.LogUtil - ===== Test Suite Started =====
+[2025-11-09 16:00:26] [TestNG-tests-1] INFO  utils.LogUtil - Started test: verifyLogin
+[2025-11-09 16:01:28] [TestNG-tests-1] ERROR utils.LogUtil - ❌ Test Failed: verifyLogin | org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(text(),'Login')]"}
+  (Session info: chrome=142.0.7444.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5a26de65ee5bd0f35ce741497860c04c, findElement {value=//button[contains(text(),'Login')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.60, chrome: {chromedriverVersion: 142.0.7444.61 (9884f628acbc..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52954}, goog:processID: 21156, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52954/devtoo..., se:cdpVersion: 142.0.7444.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5a26de65ee5bd0f35ce741497860c04c
+[2025-11-09 16:01:29] [TestNG-tests-1] INFO  utils.LogUtil - ===== Test Suite Finished =====
+[2025-11-09 16:03:10] [TestNG-tests-1] INFO  utils.LogUtil - ===== Test Suite Started =====
+[2025-11-09 16:03:11] [TestNG-tests-1] INFO  utils.LogUtil - Started test: verifyLogin
+[2025-11-09 16:04:12] [TestNG-tests-1] ERROR utils.LogUtil - ❌ Test Failed: verifyLogin | java.lang.AssertionError: ❌ Login failed or incorrect page title! expected [Dashboard] but found [MetalAdmin]
+[2025-11-09 16:04:13] [TestNG-tests-1] INFO  utils.LogUtil - ===== Test Suite Finished =====
+[2025-11-09 16:05:42] [TestNG-tests-1] INFO  utils.LogUtil - ===== Test Suite Started =====
+[2025-11-09 16:05:43] [TestNG-tests-1] INFO  utils.LogUtil - Started test: verifyLogin
+[2025-11-09 16:06:34] [TestNG-tests-1] ERROR utils.LogUtil - ❌ Test Failed: verifyLogin | java.lang.AssertionError: ❌ Login failed or incorrect page title! expected [Dashboard] but found [MetalAdmin]
+[2025-11-09 16:06:34] [TestNG-tests-1] INFO  utils.LogUtil - ===== Test Suite Finished =====
+[2025-11-09 16:07:46] [TestNG-tests-1] INFO  utils.LogUtil - ===== Test Suite Started =====
+[2025-11-09 16:07:47] [TestNG-tests-1] INFO  utils.LogUtil - Started test: verifyLogin
+[2025-11-09 16:08:47] [TestNG-tests-1] ERROR utils.LogUtil - ❌ Test Failed: verifyLogin | java.lang.AssertionError: ❌ Login failed or incorrect page title! expected [Dashboard] but found [MetalAdmin]
+[2025-11-09 16:08:48] [TestNG-tests-1] INFO  utils.LogUtil - ===== Test Suite Finished =====
