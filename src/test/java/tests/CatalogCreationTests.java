@@ -53,7 +53,7 @@ public class CatalogCreationTests extends BaseTest {
 		String BidBasisVal = data[0][11].toString();
 		String UomVal = data[0][12].toString();
 		String MultiFactorVal = data[0][13].toString();
-		String fileLocation = "NAFED_Techformat.xlsx";
+		String fileLocation = "NAFED_Techformat_10Lot.xlsx";
 
 		CatalogPage catalogPage = new CatalogPage(driver);
 		CatalogSchedulePage catalogSchedulePage = new CatalogSchedulePage(driver);

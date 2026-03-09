@@ -92,17 +92,17 @@ public class CatalogPage {
 	// actions
 
 	public void selectOrganization(String organization) {
-		//  Open dropdown
+		// Open dropdown
 		wait.until(ExpectedConditions.elementToBeClickable(selectOrganizationbutton)).click();
 
-		//  Wait for input to appear
+		// Wait for input to appear
 		WebElement input = wait.until(ExpectedConditions.visibilityOf(organizationInput));
 
-		//  Type organization
+		// Type organization
 		input.clear();
 		input.sendKeys(organization);
 
-		//  Select exact match option
+		// Select exact match option
 		By optionLocator = By.xpath(
 				"//div[contains(@class,'ng-dropdown-panel')]//div[contains(@class,'ng-option')]//label[normalize-space()='"
 						+ organization + "']");
@@ -110,7 +110,7 @@ public class CatalogPage {
 
 		option.click();
 
-		//  Wait for dropdown to close
+		// Wait for dropdown to close
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("ng-dropdown-panel")));
 	}
 
@@ -119,11 +119,11 @@ public class CatalogPage {
 		// Open dropdown
 		wait.until(ExpectedConditions.elementToBeClickable(selectSubOrganizationbutton)).click();
 
-		//  Wait for input to appear
+		// Wait for input to appear
 		WebElement input = wait.until(ExpectedConditions.visibilityOf(subOrganizationInput));
 		wait.until(ExpectedConditions.elementToBeClickable(subOrganizationInput));
 
-		//  Type organization
+		// Type organization
 		input.clear();
 		input.sendKeys(subOrganization);
 
@@ -160,19 +160,10 @@ public class CatalogPage {
 
 		WebElement input = wait.until(ExpectedConditions.elementToBeClickable(catalogCodeInput));
 
-		/*
-		 * JavascriptExecutor js = (JavascriptExecutor) driver;
-		 * js.executeScript("arguments[0].value = arguments[1];" +
-		 * "arguments[0].dispatchEvent(new Event('input', {bubbles:true}));", input,
-		 * finalCode);
-		 */
-
 		input.click();
-		input.sendKeys(Keys.CONTROL + "a");
-		input.sendKeys(Keys.DELETE);
 		input.sendKeys(finalCode);
 
-		input.sendKeys(Keys.TAB);
+		//wait.until(ExpectedConditions.attributeToBe(input, finalCode, finalCode));
 
 		System.out.println("Final Code: " + finalCode);
 
@@ -187,13 +178,6 @@ public class CatalogPage {
 		System.out.println("Final Name: " + finalName);
 
 		WebElement input = wait.until(ExpectedConditions.visibilityOf(catalogNameInput));
-
-		/*
-		 * JavascriptExecutor js = (JavascriptExecutor) driver;
-		 * js.executeScript("arguments[0].value = arguments[1];" +
-		 * "arguments[0].dispatchEvent(new Event('input', {bubbles:true}));", input,
-		 * finalName);
-		 */
 
 		input.click();
 		input.sendKeys(Keys.CONTROL + "a");

@@ -1,9 +1,201 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="6" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-03-07T15:51:09 IST" name="Agro Automation Suite" finished-at="2026-03-07T15:51:09 IST" duration-ms="0">
+  <suite started-at="2026-03-09T11:48:39 IST" name="Agro Automation Suite" finished-at="2026-03-09T11:52:56 IST" duration-ms="256746">
     <groups>
     </groups>
+    <test started-at="2026-03-09T11:48:39 IST" name="Complete Suite" finished-at="2026-03-09T11:52:56 IST" duration-ms="256746">
+      <class name="tests.LoginTests">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:tests.LoginTests@2f01783a]" started-at="2026-03-09T11:48:39 IST" name="setup" finished-at="2026-03-09T11:48:40 IST" duration-ms="1470" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyLogin()[pri:0, instance:tests.LoginTests@2f01783a]" started-at="2026-03-09T11:48:40 IST" name="verifyLogin" description="Verify user can log in with valid credentials" finished-at="2026-03-09T11:48:49 IST" duration-ms="8605" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTests@2f01783a]" started-at="2026-03-09T11:48:49 IST" name="tearDown" finished-at="2026-03-09T11:48:49 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.LoginTests -->
+      <class name="tests.CatalogCreationGUJRATtests">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:tests.CatalogCreationGUJRATtests@78fa769e]" started-at="2026-03-09T11:49:59 IST" name="setup" finished-at="2026-03-09T11:50:00 IST" duration-ms="787" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyCatalogCreationGUJRAT()[pri:0, instance:tests.CatalogCreationGUJRATtests@78fa769e]" started-at="2026-03-09T11:50:00 IST" name="verifyCatalogCreationGUJRAT" description="Catalog Creation for GUJRAT Auction" finished-at="2026-03-09T11:50:44 IST" duration-ms="44315" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCatalogCreationGUJRAT -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.CatalogCreationGUJRATtests@78fa769e]" started-at="2026-03-09T11:50:44 IST" name="tearDown" finished-at="2026-03-09T11:50:44 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.CatalogCreationGUJRATtests -->
+      <class name="tests.RoundOneBiddingTests">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:tests.RoundOneBiddingTests@2c78324b]" started-at="2026-03-09T11:51:45 IST" name="setup" finished-at="2026-03-09T11:51:47 IST" duration-ms="1435" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="VerifyBiddingRound1NAFED()[pri:0, instance:tests.RoundOneBiddingTests@2c78324b]" started-at="2026-03-09T11:51:47 IST" name="VerifyBiddingRound1NAFED" description="Verify Bidder can Bid in Auction Round 1 NAFED" finished-at="2026-03-09T11:52:55 IST" duration-ms="68646" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //mat-table[@role='table'] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49448}, goog:processID: 20012, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49448/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c40636c63d5c78298fdab44e553c3cfa]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //mat-table[@role='table'] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49448}, goog:processID: 20012, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49448/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c40636c63d5c78298fdab44e553c3cfa
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at pages.BidderDashboardPage.enterPriceAndQtyForAllLots(BidderDashboardPage.java:122)
+at tests.RoundOneBiddingTests.VerifyBiddingRound1NAFED(RoundOneBiddingTests.java:37)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyBiddingRound1NAFED -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RoundOneBiddingTests@2c78324b]" started-at="2026-03-09T11:52:56 IST" name="tearDown" finished-at="2026-03-09T11:52:56 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.RoundOneBiddingTests -->
+      <class name="tests.BidderLoginTests">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:tests.BidderLoginTests@54e041a4]" started-at="2026-03-09T11:51:24 IST" name="setup" finished-at="2026-03-09T11:51:25 IST" duration-ms="762" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyBidderLogin()[pri:0, instance:tests.BidderLoginTests@54e041a4]" started-at="2026-03-09T11:51:25 IST" name="verifyBidderLogin" description="Verify Bidder can login with valid Credentials" finished-at="2026-03-09T11:51:45 IST" duration-ms="20441" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyBidderLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.BidderLoginTests@54e041a4]" started-at="2026-03-09T11:51:45 IST" name="tearDown" finished-at="2026-03-09T11:51:45 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.BidderLoginTests -->
+      <class name="tests.CatalogCreationHAFEDtests">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:tests.CatalogCreationHAFEDtests@16612a51]" started-at="2026-03-09T11:50:44 IST" name="setup" finished-at="2026-03-09T11:50:45 IST" duration-ms="917" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyCatalogCreationHAFED()[pri:0, instance:tests.CatalogCreationHAFEDtests@16612a51]" started-at="2026-03-09T11:50:45 IST" name="verifyCatalogCreationHAFED" description="Catalog Creation for HAFED Auction" finished-at="2026-03-09T11:51:24 IST" duration-ms="39369" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCatalogCreationHAFED -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.CatalogCreationHAFEDtests@16612a51]" started-at="2026-03-09T11:51:24 IST" name="tearDown" finished-at="2026-03-09T11:51:24 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.CatalogCreationHAFEDtests -->
+      <class name="tests.CatalogCreationTests">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:tests.CatalogCreationTests@7fd7a283]" started-at="2026-03-09T11:48:49 IST" name="setup" finished-at="2026-03-09T11:48:50 IST" duration-ms="782" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyCatalogCreationNAFED()[pri:0, instance:tests.CatalogCreationTests@7fd7a283]" started-at="2026-03-09T11:48:50 IST" name="verifyCatalogCreationNAFED" description="Catalog Creation for Nafed Auction" finished-at="2026-03-09T11:49:20 IST" duration-ms="30554" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCatalogCreationNAFED -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.CatalogCreationTests@7fd7a283]" started-at="2026-03-09T11:49:20 IST" name="tearDown" finished-at="2026-03-09T11:49:20 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.CatalogCreationTests -->
+      <class name="tests.CatalogCreationNCCFTests">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:tests.CatalogCreationNCCFTests@22f59fa]" started-at="2026-03-09T11:49:20 IST" name="setup" finished-at="2026-03-09T11:49:22 IST" duration-ms="1557" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyCatalogCreationNCCF()[pri:0, instance:tests.CatalogCreationNCCFTests@22f59fa]" started-at="2026-03-09T11:49:22 IST" name="verifyCatalogCreationNCCF" description="Catalog Creation for NCCF Auction" finished-at="2026-03-09T11:49:59 IST" duration-ms="36867" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCatalogCreationNCCF -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.CatalogCreationNCCFTests@22f59fa]" started-at="2026-03-09T11:49:59 IST" name="tearDown" finished-at="2026-03-09T11:49:59 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.CatalogCreationNCCFTests -->
+    </test> <!-- Complete Suite -->
   </suite> <!-- Agro Automation Suite -->
 </testng-results>
