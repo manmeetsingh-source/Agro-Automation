@@ -40,7 +40,8 @@ public class CatalogCreationGUJRATtests extends BaseTest {
 		catalogListingPage.CatalogCreate();
 
 		// Read Organization from excel
-		Object[][] data = ExcelUtil.getTestData("Catalog_Data");
+		Object[][] data = ExcelUtil.getTestData("Catalog_Data.xlsx.xlsx", "Catalog_Data");
+
 		String organization = data[2][1].toString(); // Third row, first column
 		String Suborganization = data[2][2].toString(); // Third row, second column
 		String Template = data[2][3].toString(); // Third row, third column
@@ -55,6 +56,7 @@ public class CatalogCreationGUJRATtests extends BaseTest {
 		String UomVal = data[2][12].toString();
 		String MultiFactorVal = data[2][13].toString();
 		String fileLocation = "GUJRAT_TechFormat.xlsx";
+		String commodity = "Moong-Guj";
 
 		CatalogPage catalogPage = new CatalogPage(driver);
 		CatalogSchedulePage catalogSchedulePage = new CatalogSchedulePage(driver);
@@ -81,6 +83,7 @@ public class CatalogCreationGUJRATtests extends BaseTest {
 		catalogPage.saveBasicDetails();
 		catalogSchedulePage.ClickCatalogScheduleContinue();
 		categorySelectionPage.enterGujratCategorySelectionValues(LotVal, UomVal, BidBasisVal, MultiFactorVal);
+		ExcelUtil.generateDynamicLots(fileLocation, "Techformat", commodity);
 		uploadTechFormatPage.techformatFileUpload(fileLocation);
 		catalogImageVideoPage.clickImagePageContinuebtn();
 		emdRulePage.selectEMDruleEnglish();

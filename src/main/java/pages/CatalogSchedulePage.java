@@ -26,7 +26,14 @@ public class CatalogSchedulePage {
 	// Actions
 	
 	public void ClickCatalogScheduleContinue() {
-		wait.until(ExpectedConditions.elementToBeClickable(catalogScheduleContinuebtn)).click();
+		
+		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(catalogScheduleContinuebtn));
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView({block:'center'});", element);
+
+		js.executeScript("arguments[0].click();", element);
+		
 		
 	}
 }

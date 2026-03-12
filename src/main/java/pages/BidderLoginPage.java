@@ -12,26 +12,27 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BidderLoginPage {
 
-	private WebDriverWait wait;
-	private WebDriver driver;
+	public WebDriverWait wait;
+	public WebDriver driver;
 
 	public BidderLoginPage(WebDriver driver) {
+		this.driver = driver;
 		this.wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		PageFactory.initElements(driver, this);
 	}
 
 	// locators
 	@FindBy(xpath = "//form//input[@id=\"username\"]")
-	private WebElement bidderUsernameField;
+	public WebElement bidderUsernameField;
 
 	@FindBy(xpath = "//form//input[@id=\"password\"]")
-	private WebElement bidderPasswordField;
+	public WebElement bidderPasswordField;
 
 	@FindBy(xpath = "//form//input[@id=\"check2\"]")
-	private WebElement bidderTermsandConditionsCheckbox;
+	public WebElement bidderTermsandConditionsCheckbox;
 
 	@FindBy(xpath = "//form//button[@type=\"submit\"]")
-	private WebElement clickOnBidderLoginbtn;
+	public WebElement clickOnBidderLoginbtn;
 
 	// Actions
 
@@ -61,31 +62,22 @@ public class BidderLoginPage {
 
 	public void HandleAlreadyLoggedInPopUp() {
 
-		WebDriverWait popupWait = new WebDriverWait(driver, Duration.ofSeconds(5));
-
-		By popupHeader = By.xpath("//div[contains(@class,'modal-content')]//h2[contains(text(),'Session Exists')]");
-
-		By yesButton = By.xpath("//div[contains(@class,'modal-content')]//button[normalize-space()='Yes']");
+		WebDriverWait popupWait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
 		try {
+			popupWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
+					"//p[contains(text(),'Session already exists, do you want to close the previous session?')]")));
 
-			popupWait.until(ExpectedConditions.visibilityOfElementLocated(popupHeader));
+			System.out.println("Existing session detected — handling popup");
 
-			System.out.println("Already bidder session exists");
+			WebElement acceptButton = driver.findElement(By.xpath("//button[@class=\"btn btn-primary\"]"));
+			acceptButton.click();
 
-			WebElement yesBtnElement = popupWait.until(ExpectedConditions.elementToBeClickable(yesButton));
-
-			yesBtnElement.click();
-
-			// Wait for popup to disappear
-			popupWait.until(ExpectedConditions.invisibilityOfElementLocated(popupHeader));
-
-			System.out.println("Existing session handled successfully");
+			System.out.println("Popup handled successfully.");
 
 		} catch (Exception e) {
-			System.out.println("No Existing Session Found");
+			System.out.println("No existing session popup found.");
 		}
-
 	}
 
 	public void LoginAsBidder(String bidderName, String bidderPassword) {

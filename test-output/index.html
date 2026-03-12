@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Agro_Automation_Suite" class="navigator-link">
-              <span class="suite-name border-failed">Agro Automation Suite</span>
+              <span class="suite-name border-passed">Agro Automation Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,21 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">7 methods, 1 failed,   6 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Agro_Automation_Suite" class="hide-methods failed suite-Agro_Automation_Suite"> (hide)</a> <!-- hide-methods failed suite-Agro_Automation_Suite -->
-                      <a href="#" panel-name="suite-Agro_Automation_Suite" class="show-methods failed suite-Agro_Automation_Suite"> (show)</a> <!-- show-methods failed suite-Agro_Automation_Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Agro_Automation_Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Agro_Automation_Suite" title="tests.RoundOneBiddingTests" class="method navigator-link" hash-for-method="VerifyBiddingRound1NAFED">VerifyBiddingRound1NAFED</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Agro_Automation_Suite -->
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -117,32 +103,7 @@
                     <div class="method-list-content passed suite-Agro_Automation_Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Agro_Automation_Suite" title="tests.BidderLoginTests" class="method navigator-link" hash-for-method="verifyBidderLogin">verifyBidderLogin</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Agro_Automation_Suite" title="tests.CatalogCreationGUJRATtests" class="method navigator-link" hash-for-method="verifyCatalogCreationGUJRAT">verifyCatalogCreationGUJRAT</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Agro_Automation_Suite" title="tests.CatalogCreationHAFEDtests" class="method navigator-link" hash-for-method="verifyCatalogCreationHAFED">verifyCatalogCreationHAFED</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Agro_Automation_Suite" title="tests.CatalogCreationTests" class="method navigator-link" hash-for-method="verifyCatalogCreationNAFED">verifyCatalogCreationNAFED</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Agro_Automation_Suite" title="tests.CatalogCreationNCCFTests" class="method navigator-link" hash-for-method="verifyCatalogCreationNCCF">verifyCatalogCreationNCCF</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Agro_Automation_Suite" title="tests.LoginTests" class="method navigator-link" hash-for-method="verifyLogin">verifyLogin</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Agro_Automation_Suite -->
@@ -157,91 +118,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Agro_Automation_Suite" class="panel Agro_Automation_Suite">
-          <div class="suite-Agro_Automation_Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">tests.RoundOneBiddingTests</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="VerifyBiddingRound1NAFED">
-                  </a> <!-- VerifyBiddingRound1NAFED -->
-                  <span class="method-name">VerifyBiddingRound1NAFED</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //mat-table[@role=&apos;table&apos;] (tried for 30 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49448}, goog:processID: 20012, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49448/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: c40636c63d5c78298fdab44e553c3cfa
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pages.BidderDashboardPage.enterPriceAndQtyForAllLots(BidderDashboardPage.java:122)
-	at tests.RoundOneBiddingTests.VerifyBiddingRound1NAFED(RoundOneBiddingTests.java:37)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 15 stack frames
-</div> <!-- stack-trace -->
-                  <em>
-(Verify Bidder can Bid in Auction Round 1 NAFED)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Agro_Automation_Suite-class-failed -->
-          <div class="suite-Agro_Automation_Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">tests.CatalogCreationGUJRATtests</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyCatalogCreationGUJRAT">
-                  </a> <!-- verifyCatalogCreationGUJRAT -->
-                  <span class="method-name">verifyCatalogCreationGUJRAT</span>
-                  <em>
-(Catalog Creation for GUJRAT Auction)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Agro_Automation_Suite-class-passed -->
-          <div class="suite-Agro_Automation_Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">tests.LoginTests</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyLogin">
-                  </a> <!-- verifyLogin -->
-                  <span class="method-name">verifyLogin</span>
-                  <em>
-(Verify user can log in with valid credentials)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Agro_Automation_Suite-class-passed -->
-          <div class="suite-Agro_Automation_Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">tests.CatalogCreationNCCFTests</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyCatalogCreationNCCF">
-                  </a> <!-- verifyCatalogCreationNCCF -->
-                  <span class="method-name">verifyCatalogCreationNCCF</span>
-                  <em>
-(Catalog Creation for NCCF Auction)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Agro_Automation_Suite-class-passed -->
           <div class="suite-Agro_Automation_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -255,40 +131,6 @@ Session ID: c40636c63d5c78298fdab44e553c3cfa
                   <span class="method-name">verifyCatalogCreationNAFED</span>
                   <em>
 (Catalog Creation for Nafed Auction)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Agro_Automation_Suite-class-passed -->
-          <div class="suite-Agro_Automation_Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">tests.CatalogCreationHAFEDtests</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyCatalogCreationHAFED">
-                  </a> <!-- verifyCatalogCreationHAFED -->
-                  <span class="method-name">verifyCatalogCreationHAFED</span>
-                  <em>
-(Catalog Creation for HAFED Auction)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Agro_Automation_Suite-class-passed -->
-          <div class="suite-Agro_Automation_Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">tests.BidderLoginTests</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyBidderLogin">
-                  </a> <!-- verifyBidderLogin -->
-                  <span class="method-name">verifyBidderLogin</span>
-                  <em>
-(Verify Bidder can login with valid Credentials)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -309,13 +151,7 @@ Session ID: c40636c63d5c78298fdab44e553c3cfa
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;Complete Suite&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;tests.LoginTests&quot;/&gt;
       &lt;class name=&quot;tests.CatalogCreationTests&quot;/&gt;
-      &lt;class name=&quot;tests.CatalogCreationNCCFTests&quot;/&gt;
-      &lt;class name=&quot;tests.CatalogCreationGUJRATtests&quot;/&gt;
-      &lt;class name=&quot;tests.CatalogCreationHAFEDtests&quot;/&gt;
-      &lt;class name=&quot;tests.BidderLoginTests&quot;/&gt;
-      &lt;class name=&quot;tests.RoundOneBiddingTests&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Complete Suite --&gt;
 &lt;/suite&gt; &lt;!-- Agro Automation Suite --&gt;
@@ -329,7 +165,7 @@ Session ID: c40636c63d5c78298fdab44e553c3cfa
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Complete Suite (7 classes)</span>
+                <span class="test-name">Complete Suite (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -355,40 +191,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(7);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'VerifyBiddingRound1NAFED')
-data.setCell(0, 2, 'tests.RoundOneBiddingTests')
-data.setCell(0, 3, 68646);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyCatalogCreationGUJRAT')
-data.setCell(1, 2, 'tests.CatalogCreationGUJRATtests')
-data.setCell(1, 3, 44315);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyCatalogCreationHAFED')
-data.setCell(2, 2, 'tests.CatalogCreationHAFEDtests')
-data.setCell(2, 3, 39369);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'verifyCatalogCreationNCCF')
-data.setCell(3, 2, 'tests.CatalogCreationNCCFTests')
-data.setCell(3, 3, 36867);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'verifyCatalogCreationNAFED')
-data.setCell(4, 2, 'tests.CatalogCreationTests')
-data.setCell(4, 3, 30554);
-data.setCell(5, 0, 5)
-data.setCell(5, 1, 'verifyBidderLogin')
-data.setCell(5, 2, 'tests.BidderLoginTests')
-data.setCell(5, 3, 20441);
-data.setCell(6, 0, 6)
-data.setCell(6, 1, 'verifyLogin')
-data.setCell(6, 2, 'tests.LoginTests')
-data.setCell(6, 3, 8605);
+data.setCell(0, 1, 'verifyCatalogCreationNAFED')
+data.setCell(0, 2, 'tests.CatalogCreationTests')
+data.setCell(0, 3, 37857);
 window.suiteTableData['Agro_Automation_Suite']= { tableData: data, tableDiv: 'times-div-Agro_Automation_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 minutes</span>
+              <span class="suite-total-time">Total running time: 40 seconds</span>
               <div id="times-div-Agro_Automation_Suite">
               </div> <!-- times-div-Agro_Automation_Suite -->
             </div> <!-- times-div -->
@@ -414,116 +226,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">tests.LoginTests</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">tests.CatalogCreationTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">verifyLogin</span>
-                <span class="method-start">1478 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.CatalogCreationTests</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">setup(chrome)</span>
-                <span class="method-start">10089 ms</span>
-              </div> <!-- configuration-class before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.LoginTests</div> <!-- chronological-class-name -->
-              <div class="configuration-class after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">10089 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.CatalogCreationTests</div> <!-- chronological-class-name -->
-              <div class="test-method">
                 <span class="method-name">verifyCatalogCreationNAFED</span>
-                <span class="method-start">10873 ms</span>
+                <span class="method-start">3085 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">41442 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.CatalogCreationNCCFTests</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">setup(chrome)</span>
-                <span class="method-start">41442 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">verifyCatalogCreationNCCF</span>
-                <span class="method-start">42999 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">79868 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.CatalogCreationGUJRATtests</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">setup(chrome)</span>
-                <span class="method-start">79870 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">verifyCatalogCreationGUJRAT</span>
-                <span class="method-start">80657 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">124972 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.CatalogCreationHAFEDtests</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">setup(chrome)</span>
-                <span class="method-start">124972 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">verifyCatalogCreationHAFED</span>
-                <span class="method-start">125889 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">165258 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.BidderLoginTests</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">setup(chrome)</span>
-                <span class="method-start">165258 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">verifyBidderLogin</span>
-                <span class="method-start">166020 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">186464 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.RoundOneBiddingTests</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">setup(chrome)</span>
-                <span class="method-start">186465 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">VerifyBiddingRound1NAFED</span>
-                <span class="method-start">187900 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">256723 ms</span>
+                <span class="method-start">40950 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

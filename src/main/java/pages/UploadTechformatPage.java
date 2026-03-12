@@ -37,7 +37,7 @@ public class UploadTechformatPage {
 	public void techformatFileUpload(String fileLocation) {
 
 		String filePath = System.getProperty("user.dir")
-				+ "\\src\\test\\resources\\"+fileLocation;
+				+ "/"+"testdata"+"/"+fileLocation;
 
 		wait.until(ExpectedConditions.visibilityOf(fileInput));
 

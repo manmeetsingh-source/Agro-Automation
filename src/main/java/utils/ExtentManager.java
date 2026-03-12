@@ -19,7 +19,7 @@ public class ExtentManager {
         }
     }
 
-    // ✅ Add this method
+    // 
     public static ExtentReports getInstance() {
         if (extent == null) {
             initReport();

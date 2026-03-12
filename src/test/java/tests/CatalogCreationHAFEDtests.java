@@ -40,7 +40,7 @@ public class CatalogCreationHAFEDtests extends BaseTest {
 		catalogListingPage.CatalogCreate();
 
 		// Read Organization from excel
-		Object[][] data = ExcelUtil.getTestData("Catalog_Data");
+		Object[][] data = ExcelUtil.getTestData("Catalog_Data.xlsx.xlsx","Catalog_Data");
 		String organization = data[3][1].toString(); // Fourth row, first column
 		String Suborganization = data[3][2].toString(); // Third row, second column
 		String Template = data[3][3].toString(); // Third row, third column
@@ -55,6 +55,7 @@ public class CatalogCreationHAFEDtests extends BaseTest {
 		String UomVal = data[3][12].toString();
 		String MultiFactorVal = data[3][13].toString();
 		String fileLocation = "HAFED_TechFormat.xlsx";
+		String commodity = "BAJRA-HAFED";
 
 		CatalogPage catalogPage = new CatalogPage(driver);
 		CatalogSchedulePage catalogSchedulePage = new CatalogSchedulePage(driver);
@@ -81,6 +82,7 @@ public class CatalogCreationHAFEDtests extends BaseTest {
 		catalogPage.saveBasicDetails();
 		catalogSchedulePage.ClickCatalogScheduleContinue();
 		categorySelectionPage.enterHAFEDCategorySelectionValues(LotVal, UomVal, BidBasisVal, MultiFactorVal);
+		ExcelUtil.generateDynamicLots(fileLocation, "Techformat", commodity);
 		uploadTechFormatPage.techformatFileUpload(fileLocation);
 		catalogImageVideoPage.clickImagePageContinuebtn();
 		emdRulePage.selectEMDrule();

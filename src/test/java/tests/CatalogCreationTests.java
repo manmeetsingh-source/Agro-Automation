@@ -39,7 +39,7 @@ public class CatalogCreationTests extends BaseTest {
 		catalogListingPage.CatalogCreate();
 
 		// Read Organization from excel
-		Object[][] data = ExcelUtil.getTestData("Catalog_Data");
+		Object[][] data = ExcelUtil.getTestData("CatalogData.xlsx", "Catalog_Data");
 		String organization = data[0][1].toString(); // first row, first column
 		String Suborganization = data[0][2].toString(); // first row, first column
 		String Template = data[0][3].toString(); // first row, first column
@@ -54,6 +54,7 @@ public class CatalogCreationTests extends BaseTest {
 		String UomVal = data[0][12].toString();
 		String MultiFactorVal = data[0][13].toString();
 		String fileLocation = "NAFED_Techformat_10Lot.xlsx";
+		String commodity = "Gram";
 
 		CatalogPage catalogPage = new CatalogPage(driver);
 		CatalogSchedulePage catalogSchedulePage = new CatalogSchedulePage(driver);
@@ -68,7 +69,6 @@ public class CatalogCreationTests extends BaseTest {
 		catalogPage.selectSubOrganization(Suborganization);
 		System.out.println("SubOrganization from Excel: '" + Suborganization + "'");
 		catalogPage.selectTemplate(Template);
-		catalogPage.enterCatalogCode(Code);
 		catalogPage.enterCatalogName(Name, Code);
 		catalogPage.selectStartDateAndTime();
 		catalogPage.selectEndDateAndTime();
@@ -77,9 +77,11 @@ public class CatalogCreationTests extends BaseTest {
 		catalogPage.selectSmsGroup(SmsGroup);
 		catalogPage.fileUpload();
 		catalogPage.enterMandateNum();
+		catalogPage.enterCatalogCode(Code);
 		catalogPage.saveBasicDetails();
 		catalogSchedulePage.ClickCatalogScheduleContinue();
 		categorySelectionPage.enterCategorySelectionValues(LotVal, UomVal, BidBasisVal, MultiFactorVal);
+		ExcelUtil.generateDynamicLots(fileLocation, "Techformat", commodity);
 		uploadTechFormatPage.techformatFileUpload(fileLocation);
 		catalogImageVideoPage.clickImagePageContinuebtn();
 		emdRulePage.selectEMDrule();
