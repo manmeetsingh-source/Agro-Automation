@@ -22,7 +22,7 @@ public class RoundOneBiddingTests extends BaseTest {
 		driver.get(ConfigReader.getProperty("BidderLoginUrl"));
 
 		// Fetch credentials from config
-		String LotNameforbidPage = "GamaAutoTest/Gram/Lot";
+		String LotNameforbidPage = "WES/Gram/Lot";
 
 		// Create page object
 		BidderDashboardPage bidderDashboardPage = new BidderDashboardPage(driver);
@@ -37,7 +37,7 @@ public class RoundOneBiddingTests extends BaseTest {
 			String bidderLoginPassword = biddata[i][2].toString();
 			String price = biddata[i][5].toString();
 			String qty = biddata[i][6].toString();
-			double biddername = Double.parseDouble(bidderLoginName);
+			//double biddername = Double.parseDouble(bidderLoginName);
 
 			System.out.println("Running test for bidder: " + bidderLoginName);
 
@@ -65,12 +65,12 @@ public class RoundOneBiddingTests extends BaseTest {
 					"Blocked pool balance is successfully set in BidDetailsData sheet:" + blockpoolBalanceBeforeBid);
 
 			// Get Bid Price from BidDetails sheet and Set Price in EMD Calculation Sheet
-			double BidPrice = Double.parseDouble(biddata[0][5].toString()); // second row, Sixth column
-			ExcelUtil.writeData("EMD_Workbook.xlsx", "EMDCalculation", i + 1, 0, BidPrice);
+			double BidPrice = Double.parseDouble(price); // second row, Sixth column
+			ExcelUtil.writeData("EMD_Workbook.xlsx", "EMDCalculation", 1, 0, BidPrice);
 			System.out.println("BidPrice  is successfully set in EMDCalculation sheet:" + BidPrice);
 
-			double BidQuantity = Double.parseDouble(biddata[0][6].toString()); // second row, seventh column
-			ExcelUtil.writeData("EMD_Workbook.xlsx", "EMDCalculation", i + 1, 1, BidQuantity);
+			double BidQuantity = Double.parseDouble(qty); // second row, seventh column
+			ExcelUtil.writeData("EMD_Workbook.xlsx", "EMDCalculation",  1, 1, BidQuantity);
 			System.out.println("BidQuantity  is successfully set in EMDCalculation sheet:" + BidQuantity);
 
 			// Get Calculated EMD Value from EMD sheet and Set value to BidDetails Sheet
@@ -93,7 +93,7 @@ public class RoundOneBiddingTests extends BaseTest {
 
 			// Set Freepool balance After Bid in the BidDetails Sheet
 			double freepoolBalanceAfterBid = Double
-					.parseDouble(bidderDashboardPage.getUpdatedFreePoolBalance(freepoolBalanceBeforeBid));
+					.parseDouble(bidderDashboardPage.getUpdatedFreePoolBalance(freepoolBalanceBeforeBid,CalculatedEmdValue));
 			ExcelUtil.writeData("BidDetailsData.xlsx.xlsx", "BidData", i + 1, 8, freepoolBalanceAfterBid); // second row
 																											// third
 																											// column
@@ -102,7 +102,7 @@ public class RoundOneBiddingTests extends BaseTest {
 
 			// Set Blockpool balance After Bid in the BidDetails Sheet
 			double blockpoolBalanceAfterBid = Double
-					.parseDouble(bidderDashboardPage.getUpdatedBlockedPoolBalance(blockpoolBalanceBeforeBid));
+					.parseDouble(bidderDashboardPage.getUpdatedBlockedPoolBalance(blockpoolBalanceBeforeBid,CalculatedEmdValue));
 			ExcelUtil.writeData("BidDetailsData.xlsx.xlsx", "BidData", i + 1, 9, blockpoolBalanceAfterBid); // second
 																											// row
 																											// fourth
@@ -111,7 +111,7 @@ public class RoundOneBiddingTests extends BaseTest {
 					+ blockpoolBalanceAfterBid);
 
 			bidderDashboardPage.calculateDifferenceAmount(freepoolBalanceBeforeBid, blockpoolBalanceBeforeBid,
-					freepoolBalanceAfterBid, blockpoolBalanceAfterBid, CalculatedEmdValue, biddername);
+					freepoolBalanceAfterBid, blockpoolBalanceAfterBid, CalculatedEmdValue, bidderLoginName);
 
 			bidderDashboardPage.logoutBidder();
 

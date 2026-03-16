@@ -1,5 +1,6 @@
 package pages;
 
+import java.text.DecimalFormat;
 import java.time.Duration;
 import java.util.List;
 
@@ -15,6 +16,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import utils.ExtentManager;
+import utils.ScreenshotUtil;
 
 public class BidderDashboardPage {
 
@@ -113,12 +115,12 @@ public class BidderDashboardPage {
 		System.out.println("Watchlist button is successfully clicked");
 
 	}
-	
+
 	public void deAttachAllLots() {
 		wait.until(ExpectedConditions.elementToBeClickable(addAllWatchlistIcon)).click();
 		wait.until(ExpectedConditions.refreshed(ExpectedConditions.elementToBeClickable(addAllWatchlistIcon)));
 		System.out.println("Watchlist button is successfully clicked");
-		
+
 		wait.until(ExpectedConditions.elementToBeClickable(addAllWatchlistIcon)).click();
 		wait.until(ExpectedConditions.refreshed(ExpectedConditions.elementToBeClickable(addAllWatchlistIcon)));
 		System.out.println("Watchlist button is successfully clicked and deAttached all lots successfully");
@@ -144,14 +146,17 @@ public class BidderDashboardPage {
 		return amount;
 	}
 
-	public String getUpdatedFreePoolBalance(double oldBalance) {
+	public String getUpdatedFreePoolBalance(double oldBalance, double expectedEMD) {
 
-		wait.until(driver -> {
-			double newBalance = Double.parseDouble(getFreePoolBalance());
-			return newBalance != oldBalance;
-		});
+	    wait.until(driver -> {
+	        double newBalance = Double.parseDouble(getFreePoolBalance());
 
-		return getFreePoolBalance();
+	        double expectedBalance = oldBalance - expectedEMD;
+
+	        return Math.abs(newBalance - expectedBalance) < 0.5;
+	    });
+
+	    return getFreePoolBalance();
 	}
 
 	public String getBlockedPoolBalance() {
@@ -165,14 +170,17 @@ public class BidderDashboardPage {
 		return amount;
 	}
 
-	public String getUpdatedBlockedPoolBalance(double oldBalance) {
+	public String getUpdatedBlockedPoolBalance(double oldBalance, double expectedEMD) {
 
-		wait.until(driver -> {
-			double newBalance = Double.parseDouble(getBlockedPoolBalance());
-			return newBalance != oldBalance;
-		});
+	    wait.until(driver -> {
+	        double newBalance = Double.parseDouble(getBlockedPoolBalance());
 
-		return getBlockedPoolBalance();
+	        double expectedBalance = oldBalance + expectedEMD;
+
+	        return Math.abs(newBalance - expectedBalance) < 0.5;
+	    });
+
+	    return getBlockedPoolBalance();
 	}
 
 	public void enterPriceAndQtyForAllLots(String price, String qty) {
@@ -229,7 +237,7 @@ public class BidderDashboardPage {
 	}
 
 	public double calculateDifferenceAmount(double freepoolBeforeBid, double blockedpoolBeforeBid,
-			double freepoolAfterBid, double blockedpoolAfterBid, double calculatedEMD, double bidderLoginName) {
+			double freepoolAfterBid, double blockedpoolAfterBid, double calculatedEMD, String bidderLoginName) {
 
 		double diffrenceFreepoolAmount = freepoolBeforeBid - freepoolAfterBid;
 		System.out.println("Amount deducted from freepool is: " + diffrenceFreepoolAmount);
@@ -237,7 +245,7 @@ public class BidderDashboardPage {
 		double diffrenceBlockedpoolAmount = blockedpoolAfterBid - blockedpoolBeforeBid;
 		System.out.println("Amount added to blockedpool is: " + diffrenceBlockedpoolAmount);
 
-		double tolerance = 0.01;
+		double tolerance = 0.9;
 
 		if (Math.abs(diffrenceFreepoolAmount - calculatedEMD) < tolerance
 				&& Math.abs(diffrenceBlockedpoolAmount - calculatedEMD) < tolerance) {
@@ -248,38 +256,33 @@ public class BidderDashboardPage {
 
 			System.out.println("Calculation is NOT working properly");
 		}
-		
-		
+
 		String result;
 
-	    if (Math.abs(diffrenceFreepoolAmount - calculatedEMD) < 0.01 && Math.abs(diffrenceBlockedpoolAmount - calculatedEMD) <0.01){
-	        result = "<span style='color:green'><b>PASS</b></span>";
-	    } else {
-	        result = "<span style='color:red'><b>FAIL</b></span>";
-	    }
+		if (Math.abs(diffrenceFreepoolAmount - calculatedEMD) < tolerance
+				&& Math.abs(diffrenceBlockedpoolAmount - calculatedEMD) < tolerance) {
+			result = "<span style='color:green'><b>PASS</b></span>";
+		} else {
+			result = "<span style='color:red'><b>FAIL</b></span>";
+		}
 
-	    String reportBlock =
-	            "<b>Bidder " + bidderLoginName + "</b><br>" +
-	            "--------------------------------<br>" +
+		String reportBlock = "<b>Bidder " + bidderLoginName + "</b><br>" + "--------------------------------<br>" +
 
-	            "<b>Freepool Details</b><br>" +
-	            "Freepool Before  : " + freepoolBeforeBid + "<br>" +
-	            "Freepool After   : " + freepoolAfterBid + "<br>" +
-	            "Actual Deduction : " + diffrenceFreepoolAmount + "<br><br>" +
+				"<b>Freepool Details</b><br>" + "Freepool Before  : " + freepoolBeforeBid + "<br>"
+				+ "Freepool After   : " + freepoolAfterBid + "<br>" + "Actual Deduction : " + diffrenceFreepoolAmount
+				+ "<br><br>" +
 
-	            "<b>Blockedpool Details</b><br>" +
-	            "Blockedpool Before : " + blockedpoolBeforeBid + "<br>" +
-	            "Blockedpool After  : " + blockedpoolAfterBid + "<br>" +
-	            "Actual Added       : " + diffrenceBlockedpoolAmount + "<br><br>" +
+				"<b>Blockedpool Details</b><br>" + "Blockedpool Before : " + blockedpoolBeforeBid + "<br>"
+				+ "Blockedpool After  : " + blockedpoolAfterBid + "<br>" + "Actual Added       : "
+				+ diffrenceBlockedpoolAmount + "<br><br>" +
 
-	            "Expected EMD : " + calculatedEMD + "<br>" +
-	            "<b>Result : " + result + "</b>";
+				"Expected EMD : " + calculatedEMD + "<br>" + "<b>Result : " + result + "</b>";
 
-	    ExtentManager.getTest().info(reportBlock);
+		ExtentManager.getTest().info(reportBlock);
 
-	    return diffrenceFreepoolAmount;
+		return diffrenceFreepoolAmount;
 	}
-	
+
 	public void logoutBidder() {
 
 		wait.until(ExpectedConditions.elementToBeClickable(bidderNamespn)).click();

@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-03-12T21:25:51 IST" name="Agro Automation Suite" finished-at="2026-03-12T21:26:32 IST" duration-ms="40975">
+  <suite started-at="2026-03-16T13:37:46 IST" name="Agro Automation Suite" finished-at="2026-03-16T13:39:35 IST" duration-ms="109492">
     <groups>
     </groups>
-    <test started-at="2026-03-12T21:25:51 IST" name="Complete Suite" finished-at="2026-03-12T21:26:32 IST" duration-ms="40975">
-      <class name="tests.CatalogCreationTests">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:tests.CatalogCreationTests@7d9f158f]" started-at="2026-03-12T21:25:51 IST" name="setup" finished-at="2026-03-12T21:25:55 IST" duration-ms="3066" status="PASS">
+    <test started-at="2026-03-16T13:37:46 IST" name="Complete Suite" finished-at="2026-03-16T13:39:35 IST" duration-ms="109492">
+      <class name="tests.RoundOneBiddingTests">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:tests.RoundOneBiddingTests@7d9f158f]" started-at="2026-03-16T13:37:46 IST" name="setup" finished-at="2026-03-16T13:37:47 IST" duration-ms="1778" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,15 +18,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyCatalogCreationNAFED()[pri:0, instance:tests.CatalogCreationTests@7d9f158f]" started-at="2026-03-12T21:25:55 IST" name="verifyCatalogCreationNAFED" description="Catalog Creation for Nafed Auction" finished-at="2026-03-12T21:26:32 IST" duration-ms="37857" status="PASS">
+        <test-method signature="VerifyBiddingRound1NAFED()[pri:0, instance:tests.RoundOneBiddingTests@7d9f158f]" started-at="2026-03-16T13:37:47 IST" name="VerifyBiddingRound1NAFED" description="Verify Bidder can Bid in Auction Round 1 NAFED" finished-at="2026-03-16T13:39:35 IST" duration-ms="107681" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyCatalogCreationNAFED -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.CatalogCreationTests@7d9f158f]" started-at="2026-03-12T21:26:32 IST" name="tearDown" finished-at="2026-03-12T21:26:32 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- VerifyBiddingRound1NAFED -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RoundOneBiddingTests@7d9f158f]" started-at="2026-03-16T13:39:35 IST" name="tearDown" finished-at="2026-03-16T13:39:35 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- tests.CatalogCreationTests -->
+      </class> <!-- tests.RoundOneBiddingTests -->
     </test> <!-- Complete Suite -->
   </suite> <!-- Agro Automation Suite -->
 </testng-results>

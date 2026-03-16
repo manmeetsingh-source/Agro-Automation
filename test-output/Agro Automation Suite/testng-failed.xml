@@ -7,13 +7,13 @@
   </listeners>
   <test thread-count="2" parallel="tests" name="Complete Suite(failed)">
     <classes>
-      <class name="tests.CatalogCreationTests">
+      <class name="tests.RoundOneBiddingTests">
         <methods>
           <include name="setup"/>
           <include name="tearDown"/>
-          <include name="verifyCatalogCreationNAFED"/>
+          <include name="VerifyBiddingRound1NAFED"/>
         </methods>
-      </class> <!-- tests.CatalogCreationTests -->
+      </class> <!-- tests.RoundOneBiddingTests -->
     </classes>
   </test> <!-- Complete Suite(failed) -->
 </suite> <!-- Failed suite [Agro Automation Suite] -->

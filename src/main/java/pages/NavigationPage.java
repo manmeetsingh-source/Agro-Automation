@@ -48,7 +48,7 @@ public class NavigationPage {
 
 		wait.until(ExpectedConditions.visibilityOf(catalogListingHeader));
 
-		System.out.println("✅ Navigated Successfully: " + driver.getCurrentUrl());
+		System.out.println(" Navigated Successfully: " + driver.getCurrentUrl());
 
 		/* wait.until(ExpectedConditions.urlContains("/catalog")); */
 	}
