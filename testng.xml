@@ -22,12 +22,12 @@
 	<test name="Complete Suite">
 
 		<classes>
-			<!--<class name="tests.LoginTests" />-->
-			<!--<class name="tests.CatalogCreationTests" />-->
-			<!--<class name="tests.CatalogCreationNCCFTests" />
+			<class name="tests.LoginTests" />
+			<class name="tests.CatalogCreationTests" />
+			<class name="tests.CatalogCreationNCCFTests" />
 			<class name="tests.CatalogCreationGUJRATtests" />
 			<class name="tests.CatalogCreationHAFEDtests" />
-			<class name="tests.BidderLoginTests" />-->
+			<class name="tests.BidderLoginTests" />
 			<class name="tests.RoundOneBiddingTests" />
 		</classes>
 	</test>

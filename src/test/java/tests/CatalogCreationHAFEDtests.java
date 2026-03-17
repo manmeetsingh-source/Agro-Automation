@@ -40,7 +40,7 @@ public class CatalogCreationHAFEDtests extends BaseTest {
 		catalogListingPage.CatalogCreate();
 
 		// Read Organization from excel
-		Object[][] data = ExcelUtil.getTestData("Catalog_Data.xlsx.xlsx","Catalog_Data");
+		Object[][] data = ExcelUtil.getTestData("CatalogData.xlsx","Catalog_Data");
 		String organization = data[3][1].toString(); // Fourth row, first column
 		String Suborganization = data[3][2].toString(); // Third row, second column
 		String Template = data[3][3].toString(); // Third row, third column

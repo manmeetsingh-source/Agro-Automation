@@ -27,12 +27,9 @@ public class LoginTests extends BaseTest {
 		loginPage.login(username, password, otp);
 
 		DashboardPage dashboardPage = new DashboardPage(driver);
-
-		// Wait a moment for page to load
-		try {
-			Thread.sleep(4000);
-		} catch (InterruptedException e) {
-		}
+        
+		// wait dashboard to load
+		dashboardPage.waitForDashboardToLoad();
 
 		String actualName = dashboardPage.getLoggedInUserName();
 		Assert.assertEquals(actualName, "Manmeet Singh", " Username after login does not match!");

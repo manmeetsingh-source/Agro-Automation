@@ -40,7 +40,7 @@ public class CatalogCreationNCCFTests extends BaseTest {
 		catalogListingPage.CatalogCreate();
 
 		// Read Organization from excel
-		Object[][] data = ExcelUtil.getTestData("Catalog_Data.xlsx.xlsx","Catalog_Data");
+		Object[][] data = ExcelUtil.getTestData("CatalogData.xlsx","Catalog_Data");
 		String organization = data[1][1].toString(); // second row, first column
 		String Suborganization = data[1][2].toString(); // second row, second column
 		String Template = data[1][3].toString(); // second row, third column

@@ -13,15 +13,15 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class ExcelUtil {
-	
+
 	static {
-        // Fix Zip Bomb error
-        ZipSecureFile.setMinInflateRatio(0.001);
-    }
+		// Fix Zip Bomb error
+		ZipSecureFile.setMinInflateRatio(0.001);
+	}
 
 	public ExcelUtil() {
 		// Prevent object creation (Utility class)
-		
+
 	}
 
 	/**
@@ -52,7 +52,7 @@ public class ExcelUtil {
 				Row row = sheet.getRow(i);
 				for (int j = 0; j < totalCols; j++) {
 					Cell cell = row.getCell(j);
-					data[i - 1][j] = formatter.formatCellValue(cell,evaluator);
+					data[i - 1][j] = formatter.formatCellValue(cell, evaluator);
 				}
 			}
 			return data;
@@ -98,23 +98,22 @@ public class ExcelUtil {
 		fos.close();
 		workbook.close();
 	}
-	
-	public static void generateDynamicLots(String file, String sheet,String commodity) throws IOException {
 
-	    String baseName = "AutoTest" +
-	            LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss"));
+	public static void generateDynamicLots(String file, String sheet, String commodity) throws IOException {
 
-	    for (int i = 6; i <= 15; i++) {
+		String baseName = "VutoTest" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss"));
 
-	        String lotName = baseName + "/"+commodity+"/Lot-" + (i-5);
+		for (int i = 6; i <= 15; i++) {
 
-	        // Group No column
-	        ExcelUtil.writeData(file, sheet, i, 2, lotName);
+			String lotName = baseName + "/" + commodity + "/Lot-" + (i - 5);
 
-	        // Description column
-	        ExcelUtil.writeData(file, sheet, i, 3, lotName);
-	        
-	        System.out.println("data successfully entered in the sheet row number:"+i);
-	    }
+			// Group No column
+			ExcelUtil.writeData(file, sheet, i, 2, lotName);
+
+			// Description column
+			ExcelUtil.writeData(file, sheet, i, 3, lotName);
+
+			System.out.println("data successfully entered in the sheet row number:" + i);
+		}
 	}
 }

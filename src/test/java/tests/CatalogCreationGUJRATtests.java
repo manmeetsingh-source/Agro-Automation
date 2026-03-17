@@ -40,7 +40,7 @@ public class CatalogCreationGUJRATtests extends BaseTest {
 		catalogListingPage.CatalogCreate();
 
 		// Read Organization from excel
-		Object[][] data = ExcelUtil.getTestData("Catalog_Data.xlsx.xlsx", "Catalog_Data");
+		Object[][] data = ExcelUtil.getTestData("CatalogData.xlsx", "Catalog_Data");
 
 		String organization = data[2][1].toString(); // Third row, first column
 		String Suborganization = data[2][2].toString(); // Third row, second column

@@ -46,7 +46,7 @@ public class TestListener implements ITestListener {
 	public void onFinish(ITestContext context) {
 		extent.flush();
 
-		// ✅ Open report in browser
+		// Open report in browser
 		try {
 			String reportPath = System.getProperty("user.dir") + "/reports/ExtentReport.html";
 			java.awt.Desktop.getDesktop().browse(new java.io.File(reportPath).toURI());
