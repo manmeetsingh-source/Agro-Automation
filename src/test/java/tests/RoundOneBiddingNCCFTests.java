@@ -23,14 +23,14 @@ public class RoundOneBiddingNCCFTests extends BaseTest{
 		driver.get(ConfigReader.getProperty("BidderLoginUrl"));
 
 		// Fetch credentials from config
-		String LotNameforbidPage = "";
+		String LotNameforbidPage = "IQI-Mustard-lot";
 
 		// Create page object
 		BidderDashboardPage bidderDashboardPage = new BidderDashboardPage(driver);
 		BidderLoginPage bidderLoginPage = new BidderLoginPage(driver);
 
 		// Read BidDetails Data from BidDetails Excel file
-		Object[][] biddata = ExcelUtil.getTestData("BidDetailsDataNCCF.xlsx", "BidData");
+		Object[][] biddata = ExcelUtil.getTestData("BidDetailsDataNCCF.xlsx.xlsx", "BidData");
 
 		for (int i = 0; i < 3; i++) {
 
@@ -49,7 +49,7 @@ public class RoundOneBiddingNCCFTests extends BaseTest{
 
 			// Set Freepool balance before bid in the BidDetails Sheet
 			double freepoolBalanceBeforeBid = Double.parseDouble(bidderDashboardPage.getFreePoolBalance());
-			ExcelUtil.writeData("BidDetailsDataNCCF.xlsx", "BidData", i + 1, 3, freepoolBalanceBeforeBid); // second
+			ExcelUtil.writeData("BidDetailsDataNCCF.xlsx.xlsx", "BidData", i + 1, 3, freepoolBalanceBeforeBid); // second
 																											// row
 																											// third
 																											// column
@@ -58,7 +58,7 @@ public class RoundOneBiddingNCCFTests extends BaseTest{
 
 			// Set Blockpool balance before bid in the BidDetails Sheet
 			double blockpoolBalanceBeforeBid = Double.parseDouble(bidderDashboardPage.getBlockedPoolBalance());
-			ExcelUtil.writeData("BidDetailsDataNCCF.xlsx", "BidData", i + 1, 4, blockpoolBalanceBeforeBid); // second
+			ExcelUtil.writeData("BidDetailsDataNCCF.xlsx.xlsx", "BidData", i + 1, 4, blockpoolBalanceBeforeBid); // second
 																												// row
 																												// fourth
 																												// column
@@ -80,7 +80,7 @@ public class RoundOneBiddingNCCFTests extends BaseTest{
 			Object[][] EmdData = ExcelUtil.getTestData("EMD_Workbook.xlsx", "EMDCalculation");
 
 			double CalculatedEmdValue = Double.parseDouble(EmdData[1][9].toString()); // second row, ninth column
-			ExcelUtil.writeData("BidDetailsDataNCCF.xlsx", "BidData", i + 1, 7, CalculatedEmdValue);
+			ExcelUtil.writeData("BidDetailsDataNCCF.xlsx.xlsx", "BidData", i + 1, 7, CalculatedEmdValue);
 			System.out.println(
 					"CalculatedEmdValue balance is successfully set in BidDetailsData sheet:" + CalculatedEmdValue);
 			bidderDashboardPage.deAttachAllLots();
@@ -95,7 +95,7 @@ public class RoundOneBiddingNCCFTests extends BaseTest{
 			// Set Freepool balance After Bid in the BidDetails Sheet
 			double freepoolBalanceAfterBid = Double
 					.parseDouble(bidderDashboardPage.getUpdatedFreePoolBalance(freepoolBalanceBeforeBid,CalculatedEmdValue));
-			ExcelUtil.writeData("BidDetailsDataNCCF.xlsx", "BidData", i + 1, 8, freepoolBalanceAfterBid); // second row
+			ExcelUtil.writeData("BidDetailsDataNCCF.xlsx.xlsx", "BidData", i + 1, 8, freepoolBalanceAfterBid); // second row
 																											// third
 																											// column
 			System.out.println("Free pool balance after bid is successfully set in BidDetailsData sheet:"
@@ -104,7 +104,7 @@ public class RoundOneBiddingNCCFTests extends BaseTest{
 			// Set Blockpool balance After Bid in the BidDetails Sheet
 			double blockpoolBalanceAfterBid = Double
 					.parseDouble(bidderDashboardPage.getUpdatedBlockedPoolBalance(blockpoolBalanceBeforeBid,CalculatedEmdValue));
-			ExcelUtil.writeData("BidDetailsDataNCCF.xlsx", "BidData", i + 1, 9, blockpoolBalanceAfterBid); // second
+			ExcelUtil.writeData("BidDetailsDataNCCF.xlsx.xlsx", "BidData", i + 1, 9, blockpoolBalanceAfterBid); // second
 																											// row
 																											// fourth
 																											// column

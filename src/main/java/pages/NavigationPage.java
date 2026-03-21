@@ -26,6 +26,9 @@ public class NavigationPage {
 	// Pre-Auctions menu item
 	@FindBy(xpath = "//span[text()='Pre Auction']/ancestor::div[contains(@class,'dropdown-title')]")
 	private WebElement preAuctionMenu;
+	
+	@FindBy(xpath = "//span[text()='Dashboards & Reports']/ancestor::div[contains(@class,'dropdown-title')]")
+	private WebElement reportsAndDashboard;
 
 	// Catalog Listing submenu item
 	@FindBy(xpath = "//a[contains(@href, '/post-auth/pre-auction/catalog-listing')]")
@@ -52,4 +55,24 @@ public class NavigationPage {
 
 		/* wait.until(ExpectedConditions.urlContains("/catalog")); */
 	}
+	
+	
+	public void navigateToNAFEDReports() {
+		
+		wait.until(ExpectedConditions.elementToBeClickable(hamburgerMenu)).click();
+		System.out.println("Clicked Hamburger");
+		
+		wait.until(ExpectedConditions.elementToBeClickable(reportsAndDashboard)).click();
+		System.out.println("Clicked on Reports and Dashboard");
+		
+		wait.until(ExpectedConditions.elementToBeClickable(reportsAndDashboard)).click();
+		System.out.println("Clicked on Reports and Dashboard");
+
+		
+		
+		
+		
+	}
+	
+	
 }

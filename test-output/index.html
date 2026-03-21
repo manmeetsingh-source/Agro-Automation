@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 5 failed tests</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Agro_Automation_Suite" class="navigator-link">
-              <span class="suite-name border-failed">Agro Automation Suite</span>
+              <span class="suite-name border-passed">Agro Automation Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,41 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">7 methods, 5 failed,   2 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Agro_Automation_Suite" class="hide-methods failed suite-Agro_Automation_Suite"> (hide)</a> <!-- hide-methods failed suite-Agro_Automation_Suite -->
-                      <a href="#" panel-name="suite-Agro_Automation_Suite" class="show-methods failed suite-Agro_Automation_Suite"> (show)</a> <!-- show-methods failed suite-Agro_Automation_Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Agro_Automation_Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Agro_Automation_Suite" title="tests.RoundOneBiddingTests" class="method navigator-link" hash-for-method="VerifyBiddingRound1NAFED">VerifyBiddingRound1NAFED</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Agro_Automation_Suite" title="tests.BidderLoginTests" class="method navigator-link" hash-for-method="verifyBidderLogin">verifyBidderLogin</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Agro_Automation_Suite" title="tests.CatalogCreationGUJRATtests" class="method navigator-link" hash-for-method="verifyCatalogCreationGUJRAT">verifyCatalogCreationGUJRAT</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Agro_Automation_Suite" title="tests.CatalogCreationHAFEDtests" class="method navigator-link" hash-for-method="verifyCatalogCreationHAFED">verifyCatalogCreationHAFED</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Agro_Automation_Suite" title="tests.CatalogCreationNCCFTests" class="method navigator-link" hash-for-method="verifyCatalogCreationNCCF">verifyCatalogCreationNCCF</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Agro_Automation_Suite -->
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -137,12 +103,7 @@
                     <div class="method-list-content passed suite-Agro_Automation_Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Agro_Automation_Suite" title="tests.CatalogCreationTests" class="method navigator-link" hash-for-method="verifyCatalogCreationNAFED">verifyCatalogCreationNAFED</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Agro_Automation_Suite" title="tests.LoginTests" class="method navigator-link" hash-for-method="verifyLogin">verifyLogin</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Agro_Automation_Suite" title="tests.RoundOneBiddingGUJRATTests" class="method navigator-link" hash-for-method="VerifyBiddingRound1NCCF">VerifyBiddingRound1NCCF</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Agro_Automation_Suite -->
@@ -157,273 +118,19 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Agro_Automation_Suite" class="panel Agro_Automation_Suite">
-          <div class="suite-Agro_Automation_Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">tests.CatalogCreationGUJRATtests</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyCatalogCreationGUJRAT">
-                  </a> <!-- verifyCatalogCreationGUJRAT -->
-                  <span class="method-name">verifyCatalogCreationGUJRAT</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //app-common-btn[@class=&apos;btn-secondary btn-sm false&apos;]//span[normalize-space()=&apos;CONTINUE&apos;]&apos; (tried for 30 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pages.CatalogSchedulePage.ClickCatalogScheduleContinue(CatalogSchedulePage.java:30)
-	at tests.CatalogCreationGUJRATtests.verifyCatalogCreationGUJRAT(CatalogCreationGUJRATtests.java:84)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//app-common-btn[@class=&apos;btn-secondary btn-sm false&apos;]//span[normalize-space()=&apos;CONTINUE&apos;]&quot;}
-  (Session info: chrome=145.0.7632.160)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [7197cb37c355260f3bbabcc72a2e2669, findElement {value=//app-common-btn[@class=&apos;btn-secondary btn-sm false&apos;]//span[normalize-space()=&apos;CONTINUE&apos;], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50061}, goog:processID: 8860, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50061/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 7197cb37c355260f3bbabcc72a2e2669
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy16.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:308)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:294)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:291)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:662)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:658)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 22 more
-... Removed 18 stack frames
-</div> <!-- stack-trace -->
-                  <em>
-(Catalog Creation for GUJRAT Auction)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Agro_Automation_Suite-class-failed -->
-          <div class="suite-Agro_Automation_Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">tests.RoundOneBiddingTests</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="VerifyBiddingRound1NAFED">
-                  </a> <!-- VerifyBiddingRound1NAFED -->
-                  <span class="method-name">VerifyBiddingRound1NAFED</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for pages.BidderDashboardPage$$Lambda/0x00000130be4f24c8@695a4880 (tried for 35 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62580}, goog:processID: 15192, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62580/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 84c8662a6022e3fe98fe669306874c10
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pages.BidderDashboardPage.getUpdatedFreePoolBalance(BidderDashboardPage.java:151)
-	at tests.RoundOneBiddingTests.VerifyBiddingRound1NAFED(RoundOneBiddingTests.java:96)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 15 stack frames
-</div> <!-- stack-trace -->
-                  <em>
-(Verify Bidder can Bid in Auction Round 1 NAFED)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Agro_Automation_Suite-class-failed -->
-          <div class="suite-Agro_Automation_Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">tests.CatalogCreationNCCFTests</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyCatalogCreationNCCF">
-                  </a> <!-- verifyCatalogCreationNCCF -->
-                  <span class="method-name">verifyCatalogCreationNCCF</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //app-common-btn[@class=&apos;btn-secondary btn-sm false&apos;]//span[normalize-space()=&apos;CONTINUE&apos;]&apos; (tried for 30 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pages.CatalogSchedulePage.ClickCatalogScheduleContinue(CatalogSchedulePage.java:30)
-	at tests.CatalogCreationNCCFTests.verifyCatalogCreationNCCF(CatalogCreationNCCFTests.java:83)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//app-common-btn[@class=&apos;btn-secondary btn-sm false&apos;]//span[normalize-space()=&apos;CONTINUE&apos;]&quot;}
-  (Session info: chrome=145.0.7632.160)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [be260d2a611a747b391059aa7dfb4ef6, findElement {value=//app-common-btn[@class=&apos;btn-secondary btn-sm false&apos;]//span[normalize-space()=&apos;CONTINUE&apos;], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59426}, goog:processID: 4380, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59426/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: be260d2a611a747b391059aa7dfb4ef6
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy16.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:308)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:294)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:291)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:662)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:658)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 22 more
-... Removed 18 stack frames
-</div> <!-- stack-trace -->
-                  <em>
-(Catalog Creation for NCCF Auction)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Agro_Automation_Suite-class-failed -->
-          <div class="suite-Agro_Automation_Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">tests.CatalogCreationHAFEDtests</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyCatalogCreationHAFED">
-                  </a> <!-- verifyCatalogCreationHAFED -->
-                  <span class="method-name">verifyCatalogCreationHAFED</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //app-common-btn[@class=&apos;btn-secondary btn-sm false&apos;]//span[normalize-space()=&apos;CONTINUE&apos;]&apos; (tried for 30 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pages.CatalogSchedulePage.ClickCatalogScheduleContinue(CatalogSchedulePage.java:30)
-	at tests.CatalogCreationHAFEDtests.verifyCatalogCreationHAFED(CatalogCreationHAFEDtests.java:83)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//app-common-btn[@class=&apos;btn-secondary btn-sm false&apos;]//span[normalize-space()=&apos;CONTINUE&apos;]&quot;}
-  (Session info: chrome=145.0.7632.160)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ff92bbc0c3d44307a1a281ddea8d1b52, findElement {value=//app-common-btn[@class=&apos;btn-secondary btn-sm false&apos;]//span[normalize-space()=&apos;CONTINUE&apos;], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63482}, goog:processID: 16868, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63482/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ff92bbc0c3d44307a1a281ddea8d1b52
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy16.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:308)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:294)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:291)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:662)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:658)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 22 more
-... Removed 18 stack frames
-</div> <!-- stack-trace -->
-                  <em>
-(Catalog Creation for HAFED Auction)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Agro_Automation_Suite-class-failed -->
-          <div class="suite-Agro_Automation_Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">tests.BidderLoginTests</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyBidderLogin">
-                  </a> <!-- verifyBidderLogin -->
-                  <span class="method-name">verifyBidderLogin</span>
-                  <div class="stack-trace">java.lang.AssertionError:  Username after login does not match! expected [Manmeet Demo] but found [null]
-	at tests.BidderLoginTests.verifyBidderLogin(BidderLoginTests.java:36)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 20 stack frames
-</div> <!-- stack-trace -->
-                  <em>
-(Verify Bidder can login with valid Credentials)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Agro_Automation_Suite-class-failed -->
           <div class="suite-Agro_Automation_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">tests.LoginTests</span>
+              <span class="class-name">tests.RoundOneBiddingGUJRATTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyLogin">
-                  </a> <!-- verifyLogin -->
-                  <span class="method-name">verifyLogin</span>
+                  <a name="VerifyBiddingRound1NCCF">
+                  </a> <!-- VerifyBiddingRound1NCCF -->
+                  <span class="method-name">VerifyBiddingRound1NCCF</span>
                   <em>
-(Verify user can log in with valid credentials)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Agro_Automation_Suite-class-passed -->
-          <div class="suite-Agro_Automation_Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">tests.CatalogCreationTests</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyCatalogCreationNAFED">
-                  </a> <!-- verifyCatalogCreationNAFED -->
-                  <span class="method-name">verifyCatalogCreationNAFED</span>
-                  <em>
-(Catalog Creation for Nafed Auction)                  </em>
+(Verify Bidder can Bid in Auction Round 1 GUJRAT)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -444,13 +151,7 @@ Session ID: ff92bbc0c3d44307a1a281ddea8d1b52
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;Complete Suite&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;tests.LoginTests&quot;/&gt;
-      &lt;class name=&quot;tests.CatalogCreationTests&quot;/&gt;
-      &lt;class name=&quot;tests.CatalogCreationNCCFTests&quot;/&gt;
-      &lt;class name=&quot;tests.CatalogCreationGUJRATtests&quot;/&gt;
-      &lt;class name=&quot;tests.CatalogCreationHAFEDtests&quot;/&gt;
-      &lt;class name=&quot;tests.BidderLoginTests&quot;/&gt;
-      &lt;class name=&quot;tests.RoundOneBiddingTests&quot;/&gt;
+      &lt;class name=&quot;tests.RoundOneBiddingGUJRATTests&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Complete Suite --&gt;
 &lt;/suite&gt; &lt;!-- Agro Automation Suite --&gt;
@@ -464,7 +165,7 @@ Session ID: ff92bbc0c3d44307a1a281ddea8d1b52
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Complete Suite (7 classes)</span>
+                <span class="test-name">Complete Suite (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -490,40 +191,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(7);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'VerifyBiddingRound1NAFED')
-data.setCell(0, 2, 'tests.RoundOneBiddingTests')
-data.setCell(0, 3, 81613);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyCatalogCreationNAFED')
-data.setCell(1, 2, 'tests.CatalogCreationTests')
-data.setCell(1, 3, 60502);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyCatalogCreationGUJRAT')
-data.setCell(2, 2, 'tests.CatalogCreationGUJRATtests')
-data.setCell(2, 3, 44932);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'verifyCatalogCreationHAFED')
-data.setCell(3, 2, 'tests.CatalogCreationHAFEDtests')
-data.setCell(3, 3, 43771);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'verifyCatalogCreationNCCF')
-data.setCell(4, 2, 'tests.CatalogCreationNCCFTests')
-data.setCell(4, 3, 43539);
-data.setCell(5, 0, 5)
-data.setCell(5, 1, 'verifyLogin')
-data.setCell(5, 2, 'tests.LoginTests')
-data.setCell(5, 3, 15501);
-data.setCell(6, 0, 6)
-data.setCell(6, 1, 'verifyBidderLogin')
-data.setCell(6, 2, 'tests.BidderLoginTests')
-data.setCell(6, 3, 4560);
+data.setCell(0, 1, 'VerifyBiddingRound1NCCF')
+data.setCell(0, 2, 'tests.RoundOneBiddingGUJRATTests')
+data.setCell(0, 3, 92743);
 window.suiteTableData['Agro_Automation_Suite']= { tableData: data, tableDiv: 'times-div-Agro_Automation_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 minutes</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Agro_Automation_Suite">
               </div> <!-- times-div-Agro_Automation_Suite -->
             </div> <!-- times-div -->
@@ -549,124 +226,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">tests.LoginTests</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">tests.RoundOneBiddingGUJRATTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">verifyLogin</span>
-                <span class="method-start">3509 ms</span>
+                <span class="method-name">VerifyBiddingRound1NCCF</span>
+                <span class="method-start">1683 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">19029 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.CatalogCreationTests</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">setup(chrome)</span>
-                <span class="method-start">19029 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">verifyCatalogCreationNAFED</span>
-                <span class="method-start">20822 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">81326 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.CatalogCreationNCCFTests</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">setup(chrome)</span>
-                <span class="method-start">81328 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">verifyCatalogCreationNCCF</span>
-                <span class="method-start">82783 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">126500 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.CatalogCreationGUJRATtests</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">setup(chrome)</span>
-                <span class="method-start">126501 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">verifyCatalogCreationGUJRAT</span>
-                <span class="method-start">127547 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.CatalogCreationHAFEDtests</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">setup(chrome)</span>
-                <span class="method-start">172605 ms</span>
-              </div> <!-- configuration-class before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.CatalogCreationGUJRATtests</div> <!-- chronological-class-name -->
-              <div class="configuration-class after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">172605 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.CatalogCreationHAFEDtests</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">verifyCatalogCreationHAFED</span>
-                <span class="method-start">173295 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">217198 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.BidderLoginTests</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">setup(chrome)</span>
-                <span class="method-start">217199 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">verifyBidderLogin</span>
-                <span class="method-start">217887 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">222704 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.RoundOneBiddingTests</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">setup(chrome)</span>
-                <span class="method-start">222704 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">VerifyBiddingRound1NAFED</span>
-                <span class="method-start">223420 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">305149 ms</span>
+                <span class="method-start">94428 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

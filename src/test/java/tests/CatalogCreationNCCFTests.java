@@ -55,7 +55,7 @@ public class CatalogCreationNCCFTests extends BaseTest {
 		String UomVal = data[1][12].toString();
 		String MultiFactorVal = data[1][13].toString();
 		String fileLocation = "NCCF_Techformat.xlsx";
-		String commodity = "Mustard";
+		//String commodity = "Mustard";
 
 		CatalogPage catalogPage = new CatalogPage(driver);
 		CatalogSchedulePage catalogSchedulePage = new CatalogSchedulePage(driver);
@@ -82,7 +82,7 @@ public class CatalogCreationNCCFTests extends BaseTest {
 		catalogPage.saveBasicDetails();
 		catalogSchedulePage.ClickCatalogScheduleContinue();
 		categorySelectionPage.enterNCCFCategorySelectionValues(LotVal, UomVal, BidBasisVal, MultiFactorVal);
-		ExcelUtil.generateDynamicLots(fileLocation, "Techformat", commodity);
+		//ExcelUtil.generateDynamicLots(fileLocation, "Techformat", commodity);
 		uploadTechFormatPage.techformatFileUpload(fileLocation);
 		catalogImageVideoPage.clickImagePageContinuebtn();
 		emdRulePage.selectEMDrule();

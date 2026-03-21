@@ -55,7 +55,7 @@ public class CatalogCreationHAFEDtests extends BaseTest {
 		String UomVal = data[3][12].toString();
 		String MultiFactorVal = data[3][13].toString();
 		String fileLocation = "HAFED_TechFormat.xlsx";
-		String commodity = "BAJRA-HAFED";
+		//String commodity = "BAJRA-HAFED";
 
 		CatalogPage catalogPage = new CatalogPage(driver);
 		CatalogSchedulePage catalogSchedulePage = new CatalogSchedulePage(driver);
@@ -82,7 +82,7 @@ public class CatalogCreationHAFEDtests extends BaseTest {
 		catalogPage.saveBasicDetails();
 		catalogSchedulePage.ClickCatalogScheduleContinue();
 		categorySelectionPage.enterHAFEDCategorySelectionValues(LotVal, UomVal, BidBasisVal, MultiFactorVal);
-		ExcelUtil.generateDynamicLots(fileLocation, "Techformat", commodity);
+		//ExcelUtil.generateDynamicLots(fileLocation, "Techformat", commodity);
 		uploadTechFormatPage.techformatFileUpload(fileLocation);
 		catalogImageVideoPage.clickImagePageContinuebtn();
 		emdRulePage.selectEMDrule();

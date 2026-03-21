@@ -22,7 +22,7 @@ public class RoundOneBiddingTests extends BaseTest {
 		driver.get(ConfigReader.getProperty("BidderLoginUrl"));
 
 		// Fetch credentials from config
-		String LotNameforbidPage = "WES/Gram/Lot";
+		String LotNameforbidPage = "TCM-Gram-lot";
 
 		// Create page object
 		BidderDashboardPage bidderDashboardPage = new BidderDashboardPage(driver);

@@ -9,8 +9,8 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.file.Paths;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+
+import java.util.Random;
 
 public class ExcelUtil {
 
@@ -99,21 +99,66 @@ public class ExcelUtil {
 		workbook.close();
 	}
 
-	public static void generateDynamicLots(String file, String sheet, String commodity) throws IOException {
+	public static void generateDynamicLots(String fileName, String sheetName, String commodity) throws IOException {
 
-		String baseName = "VutoTest" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss"));
+		String excelPath = Paths.get(System.getProperty("user.dir"), "testdata", fileName).toString();
+
+		FileInputStream fis = new FileInputStream(excelPath);
+		XSSFWorkbook workbook = new XSSFWorkbook(fis);
+		XSSFSheet sheet = workbook.getSheet(sheetName);
+
+		String randomPrefix = generateRandomString(4);
 
 		for (int i = 6; i <= 15; i++) {
 
-			String lotName = baseName + "/" + commodity + "/Lot-" + (i - 5);
+			String lotName = randomPrefix + "-" + commodity + "-lot-" + (i - 5);
 
-			// Group No column
-			ExcelUtil.writeData(file, sheet, i, 2, lotName);
+			Row row = sheet.getRow(i);
+			if (row == null)
+				row = sheet.createRow(i);
 
-			// Description column
-			ExcelUtil.writeData(file, sheet, i, 3, lotName);
+			// Column 2
+			Cell cell1 = row.getCell(2);
+			if (cell1 != null) {
+				row.removeCell(cell1);
+			}
+			cell1 = row.createCell(2, CellType.STRING);
+			cell1.setCellValue(lotName.trim());
 
-			System.out.println("data successfully entered in the sheet row number:" + i);
+			// Column 3
+			Cell cell2 = row.getCell(3);
+			if (cell2 != null) {
+				row.removeCell(cell2);
+			}
+			cell2 = row.createCell(3, CellType.STRING);
+			cell2.setCellValue(lotName.trim());
+
+			System.out.println("Generated Lot Name: " + lotName);
 		}
+
+		fis.close();
+
+		workbook.setForceFormulaRecalculation(true);
+
+		FileOutputStream fos = new FileOutputStream(excelPath);
+		workbook.write(fos);
+
+		fos.close();
+		workbook.close();
 	}
+
+	// random string
+
+	public static String generateRandomString(int length) {
+		String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		Random random = new Random();
+		StringBuilder result = new StringBuilder();
+
+		for (int i = 0; i < length; i++) {
+			result.append(chars.charAt(random.nextInt(chars.length())));
+		}
+
+		return result.toString();
+	}
+
 }

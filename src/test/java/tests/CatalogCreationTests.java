@@ -54,7 +54,7 @@ public class CatalogCreationTests extends BaseTest {
 		String UomVal = data[0][12].toString();
 		String MultiFactorVal = data[0][13].toString();
 		String fileLocation = "NAFED_Techformat_10Lot.xlsx";
-		String commodity = "Gram";
+		//String commodity = "Gram";
 
 		CatalogPage catalogPage = new CatalogPage(driver);
 		CatalogSchedulePage catalogSchedulePage = new CatalogSchedulePage(driver);
@@ -81,7 +81,7 @@ public class CatalogCreationTests extends BaseTest {
 		catalogPage.saveBasicDetails();
 		catalogSchedulePage.ClickCatalogScheduleContinue();
 		categorySelectionPage.enterCategorySelectionValues(LotVal, UomVal, BidBasisVal, MultiFactorVal);
-		ExcelUtil.generateDynamicLots(fileLocation, "Techformat", commodity);
+		//ExcelUtil.generateDynamicLots(fileLocation, "Techformat", commodity);
 		uploadTechFormatPage.techformatFileUpload(fileLocation);
 		catalogImageVideoPage.clickImagePageContinuebtn();
 		emdRulePage.selectEMDrule();

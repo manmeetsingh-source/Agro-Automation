@@ -7,41 +7,13 @@
   </listeners>
   <test thread-count="2" parallel="tests" name="Complete Suite(failed)">
     <classes>
-      <class name="tests.CatalogCreationGUJRATtests">
+      <class name="tests.RoundOneBiddingGUJRATTests">
         <methods>
           <include name="setup"/>
           <include name="tearDown"/>
-          <include name="verifyCatalogCreationGUJRAT"/>
+          <include name="VerifyBiddingRound1NCCF"/>
         </methods>
-      </class> <!-- tests.CatalogCreationGUJRATtests -->
-      <class name="tests.RoundOneBiddingTests">
-        <methods>
-          <include name="setup"/>
-          <include name="tearDown"/>
-          <include name="VerifyBiddingRound1NAFED"/>
-        </methods>
-      </class> <!-- tests.RoundOneBiddingTests -->
-      <class name="tests.CatalogCreationNCCFTests">
-        <methods>
-          <include name="setup"/>
-          <include name="tearDown"/>
-          <include name="verifyCatalogCreationNCCF"/>
-        </methods>
-      </class> <!-- tests.CatalogCreationNCCFTests -->
-      <class name="tests.CatalogCreationHAFEDtests">
-        <methods>
-          <include name="setup"/>
-          <include name="tearDown"/>
-          <include name="verifyCatalogCreationHAFED"/>
-        </methods>
-      </class> <!-- tests.CatalogCreationHAFEDtests -->
-      <class name="tests.BidderLoginTests">
-        <methods>
-          <include name="setup"/>
-          <include name="tearDown"/>
-          <include name="verifyBidderLogin"/>
-        </methods>
-      </class> <!-- tests.BidderLoginTests -->
+      </class> <!-- tests.RoundOneBiddingGUJRATTests -->
     </classes>
   </test> <!-- Complete Suite(failed) -->
 </suite> <!-- Failed suite [Agro Automation Suite] -->

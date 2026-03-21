@@ -148,15 +148,15 @@ public class BidderDashboardPage {
 
 	public String getUpdatedFreePoolBalance(double oldBalance, double expectedEMD) {
 
-	    wait.until(driver -> {
-	        double newBalance = Double.parseDouble(getFreePoolBalance());
+		wait.until(driver -> {
+			double newBalance = Double.parseDouble(getFreePoolBalance());
 
-	        double expectedBalance = oldBalance - expectedEMD;
+			double expectedBalance = oldBalance - expectedEMD;
 
-	        return Math.abs(newBalance - expectedBalance) < 0.5;
-	    });
+			return Math.abs(newBalance - expectedBalance) < 0.5;
+		});
 
-	    return getFreePoolBalance();
+		return getFreePoolBalance();
 	}
 
 	public String getBlockedPoolBalance() {
@@ -172,15 +172,15 @@ public class BidderDashboardPage {
 
 	public String getUpdatedBlockedPoolBalance(double oldBalance, double expectedEMD) {
 
-	    wait.until(driver -> {
-	        double newBalance = Double.parseDouble(getBlockedPoolBalance());
+		wait.until(driver -> {
+			double newBalance = Double.parseDouble(getBlockedPoolBalance());
 
-	        double expectedBalance = oldBalance + expectedEMD;
+			double expectedBalance = oldBalance + expectedEMD;
 
-	        return Math.abs(newBalance - expectedBalance) < 0.5;
-	    });
+			return Math.abs(newBalance - expectedBalance) < 0.5;
+		});
 
-	    return getBlockedPoolBalance();
+		return getBlockedPoolBalance();
 	}
 
 	public void enterPriceAndQtyForAllLots(String price, String qty) {
@@ -209,6 +209,38 @@ public class BidderDashboardPage {
 
 			wait.until(ExpectedConditions.elementToBeClickable(qtyInput)).clear();
 			qtyInput.sendKeys(qty);
+
+			wait.until(ExpectedConditions.elementToBeClickable(priceInput)).clear();
+			priceInput.sendKeys(price);
+
+			wait.until(ExpectedConditions.elementToBeClickable(multiSelectInput)).click();
+
+			System.out.println("Entered values in row: " + (i + 1));
+		}
+	}
+
+	public void enterPriceForAllLots(String price) {
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//mat-table[@role='table']")));
+
+		List<WebElement> rows = driver
+				.findElements(By.xpath("//mat-row[contains(@class,'mat-mdc-row') and not(@hidden)]"));
+
+		System.out.println("Rows Found in the table: " + rows.size());
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+
+		for (int i = 0; i < rows.size(); i++) {
+
+			// Re-locate row each time (prevents stale element issue)
+			WebElement row = driver.findElements(By.xpath("//mat-row[contains(@class,'mat-mdc-row') and not(@hidden)]"))
+					.get(i);
+
+			// Scroll to row
+			js.executeScript("arguments[0].scrollIntoView({block:'center'});", row);
+
+			WebElement priceInput = row.findElement(By.xpath(".//input[@placeholder='Bid Price']"));
+			WebElement multiSelectInput = row.findElement(By.xpath(".//input[@placeholder='Checkbox']"));
 
 			wait.until(ExpectedConditions.elementToBeClickable(priceInput)).clear();
 			priceInput.sendKeys(price);

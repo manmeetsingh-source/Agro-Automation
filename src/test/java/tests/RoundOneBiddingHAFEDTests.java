@@ -11,26 +11,26 @@ import utils.ConfigReader;
 import utils.ExcelUtil;
 import utils.ExtentManager;
 
-public class RoundOneBiddingGUJRATTests extends BaseTest {
-
-	@Test(description = "Verify Bidder can Bid in Auction Round 1 GUJRAT")
-	public void VerifyBiddingRound1GUJRAT() throws IOException {
+public class RoundOneBiddingHAFEDTests extends BaseTest{
+	
+	@Test(description = "Verify Bidder can Bid in Auction Round 1 HAFED")
+	public void VerifyBiddingRound1HAFED() throws IOException {
 
 		ExtentManager.initReport();
-		ExtentManager.createTest("Round 1 Bidding GUJRAT Test");
+		ExtentManager.createTest("Round 1 Bidding HAFED Test");
 
 		// Load BidderLoginUrl URL from config file
 		driver.get(ConfigReader.getProperty("BidderLoginUrl"));
 
 		// Fetch credentials from config
-		String LotNameforbidPage = "TQST/ENG/Gujrat/Lot";
+		String LotNameforbidPage = "HFD/BAJRA/Lot";
 
 		// Create page object
 		BidderDashboardPage bidderDashboardPage = new BidderDashboardPage(driver);
 		BidderLoginPage bidderLoginPage = new BidderLoginPage(driver);
 
 		// Read BidDetails Data from BidDetails Excel file
-		Object[][] biddata = ExcelUtil.getTestData("BidDetailsDataGUJRAT.xlsx.xlsx", "BidData");
+		Object[][] biddata = ExcelUtil.getTestData("BidDetailsDataHAFED.xlsx", "BidData");
 
 		for (int i = 0; i < 3; i++) {
 
@@ -49,7 +49,7 @@ public class RoundOneBiddingGUJRATTests extends BaseTest {
 
 			// Set Freepool balance before bid in the BidDetails Sheet
 			double freepoolBalanceBeforeBid = Double.parseDouble(bidderDashboardPage.getFreePoolBalance());
-			ExcelUtil.writeData("BidDetailsDataGUJRAT.xlsx.xlsx", "BidData", i + 1, 3, freepoolBalanceBeforeBid); // second
+			ExcelUtil.writeData("BidDetailsDataHAFED.xlsx", "BidData", i + 1, 3, freepoolBalanceBeforeBid); // second
 																												// row
 																												// third
 																												// column
@@ -58,7 +58,7 @@ public class RoundOneBiddingGUJRATTests extends BaseTest {
 
 			// Set Blockpool balance before bid in the BidDetails Sheet
 			double blockpoolBalanceBeforeBid = Double.parseDouble(bidderDashboardPage.getBlockedPoolBalance());
-			ExcelUtil.writeData("BidDetailsDataGUJRAT.xlsx.xlsx", "BidData", i + 1, 4, blockpoolBalanceBeforeBid); // second
+			ExcelUtil.writeData("BidDetailsDataHAFED.xlsx", "BidData", i + 1, 4, blockpoolBalanceBeforeBid); // second
 																												// row
 																												// fourth
 																												// column
@@ -79,15 +79,15 @@ public class RoundOneBiddingGUJRATTests extends BaseTest {
 			// Read EMDCalculation Data from EMDWorkbook Excel file
 			Object[][] EmdData = ExcelUtil.getTestData("EMD_Workbook.xlsx", "EMDCalculation");
 
-			double CalculatedEmdValue = Double.parseDouble(EmdData[2][5].toString()); // second row, ninth column
-			ExcelUtil.writeData("BidDetailsDataGUJRAT.xlsx.xlsx", "BidData", i + 1, 7, CalculatedEmdValue);
+			double CalculatedEmdValue = Double.parseDouble(EmdData[0][5].toString()); // second row, ninth column
+			ExcelUtil.writeData("BidDetailsDataHAFED.xlsx", "BidData", i + 1, 7, CalculatedEmdValue);
 			System.out.println(
 					"CalculatedEmdValue balance is successfully set in BidDetailsData sheet:" + CalculatedEmdValue);
 			bidderDashboardPage.deAttachAllLots();
 			bidderDashboardPage.enterLotName(LotNameforbidPage);
 			bidderDashboardPage.clickOnWatchlistBtn();
 			bidderDashboardPage.clickBidTab();
-			bidderDashboardPage.enterPriceForAllLots(price);
+			bidderDashboardPage.enterPriceAndQtyForAllLots(price, qty);
 			bidderDashboardPage.clickSaveBidbtn();
 
 			bidderDashboardPage.clickOnRefreshbtn();
@@ -95,7 +95,7 @@ public class RoundOneBiddingGUJRATTests extends BaseTest {
 			// Set Freepool balance After Bid in the BidDetails Sheet
 			double freepoolBalanceAfterBid = Double.parseDouble(
 					bidderDashboardPage.getUpdatedFreePoolBalance(freepoolBalanceBeforeBid, CalculatedEmdValue));
-			ExcelUtil.writeData("BidDetailsDataGUJRAT.xlsx.xlsx", "BidData", i + 1, 8, freepoolBalanceAfterBid); // second row
+			ExcelUtil.writeData("BidDetailsDataHAFED.xlsx", "BidData", i + 1, 8, freepoolBalanceAfterBid); // second row
 																											// third
 																											// column
 			System.out.println("Free pool balance after bid is successfully set in BidDetailsData sheet:"
@@ -104,7 +104,7 @@ public class RoundOneBiddingGUJRATTests extends BaseTest {
 			// Set Blockpool balance After Bid in the BidDetails Sheet
 			double blockpoolBalanceAfterBid = Double.parseDouble(
 					bidderDashboardPage.getUpdatedBlockedPoolBalance(blockpoolBalanceBeforeBid, CalculatedEmdValue));
-			ExcelUtil.writeData("BidDetailsDataGUJRAT.xlsx.xlsx", "BidData", i + 1, 9, blockpoolBalanceAfterBid); // second
+			ExcelUtil.writeData("BidDetailsDataHAFED.xlsx", "BidData", i + 1, 9, blockpoolBalanceAfterBid); // second
 																											// row
 																											// fourth
 																											// column
@@ -119,5 +119,6 @@ public class RoundOneBiddingGUJRATTests extends BaseTest {
 		}
 
 	}
+
 
 }
